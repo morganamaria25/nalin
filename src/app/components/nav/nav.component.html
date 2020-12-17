@@ -1,0 +1,33 @@
+<nav class="container">
+  <a class="navbar-brand" href="#"><img src="assets/img/logotipo-nalin.png" alt="Logotipo da empresa Nalin" title="Logotipo Nalin"></a>
+  <div class="container-nav-principal">
+    <ul class="nav justify-content-end nav-principal">
+      <li class="nav-item">
+        <a class="nav-link smoothScroll" pageScroll href="#oque">O que é</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link smoothScroll" pageScroll href="#como-funciona">Como Funciona</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link smoothScroll" pageScroll href="#atendimento">Atendimento</a>
+      </li>
+      <li class="nav-item mt-2 icone-cliente">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <img src="assets/img/icone-area-cliente.png" alt="">
+        </button>
+        <mat-menu #menu="matMenu" class="menu-cliente text-right text-white">
+          <p class="nome-cliente bold">José Robson Ferreira do Nascimento</p>
+          <p class="cpf-cliente">CPF: <span class="bold">123.456.789-12</span></p>
+          <p class="nascimento-cliente">Nascimento: <span class="bold">21/01/1988</span></p>
+          <div class="mt-3">
+            <a href="#">Meu Contrato</a>
+            <div class="dropdown-divider"></div>
+            <a href="#">Minha apólice</a>
+            <div class="dropdown-divider"></div>
+            <a class="btn-cancelar" (click)="openDialogCancel()">Cancelar</a>
+          </div>
+        </mat-menu>
+      </li>
+    </ul>
+  </div>
+</nav>
